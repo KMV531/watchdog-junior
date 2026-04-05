@@ -200,13 +200,7 @@ const columns: ColumnDef<Log>[] = [
   },
 ];
 
-export function LogDataTable({
-  data,
-  onRefresh,
-}: {
-  data: Log[];
-  onRefresh: () => void;
-}) {
+export function LogDataTable({ data }: { data: Log[] }) {
   const [globalFilter, setGlobalFilter] = React.useState("");
 
   const handleDelete = async (id: string) => {
@@ -218,7 +212,7 @@ export function LogDataTable({
       });
 
       if (res.ok) {
-        onRefresh();
+        window.location.reload();
         toast.success("Service supprimé avec succès !");
       }
     } catch (error) {

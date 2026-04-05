@@ -25,8 +25,6 @@ export function SectionCards({ monitors = [] }: { monitors: Monitor[] }) {
   }
 
   const totalSites = monitors.length;
-
-  // Maintenant TypeScript reconnaît 'lastStatus'
   const downSites = monitors.filter((m) => m.lastStatus === "DOWN").length;
 
   const avgLatency =
@@ -44,7 +42,6 @@ export function SectionCards({ monitors = [] }: { monitors: Monitor[] }) {
 
   return (
     <div className="grid grid-cols-1 gap-4 px-4 lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
-      {/* Uptime Global */}
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Uptime Global</CardDescription>
@@ -65,7 +62,6 @@ export function SectionCards({ monitors = [] }: { monitors: Monitor[] }) {
         </CardFooter>
       </Card>
 
-      {/* Alertes Actives */}
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Incidents Actifs</CardDescription>
@@ -84,7 +80,6 @@ export function SectionCards({ monitors = [] }: { monitors: Monitor[] }) {
         </CardFooter>
       </Card>
 
-      {/* Latence Moyenne */}
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Latence Moyenne</CardDescription>
@@ -100,7 +95,6 @@ export function SectionCards({ monitors = [] }: { monitors: Monitor[] }) {
         </CardFooter>
       </Card>
 
-      {/* Total Services */}
       <Card className="@container/card">
         <CardHeader>
           <CardDescription>Services Surveillés</CardDescription>

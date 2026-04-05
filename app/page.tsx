@@ -1,9 +1,9 @@
-import Link from "next/link";
-
 export default function Home() {
   return (
     <main>
-      <Link href={"/dashboard"}>Dashboard Page</Link>
+      <h1>
+        Vous pouvez ignorer ce fichier sans risque. Il n&apos;est pas utilisé.
+      </h1>
     </main>
   );
 }

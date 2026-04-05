@@ -31,7 +31,8 @@ export function ChartAreaInteractive({ data = [] }: { data: Monitor[] }) {
     },
   } satisfies ChartConfig;
 
-  const downService = data.find((m) => m.lastStatus === "DOWN");
+  const downServices = data.filter((m) => m.lastStatus === "DOWN");
+  const hasMultipleDown = downServices.length > 1;
 
   return (
     <Card className="@container/card">
@@ -39,9 +40,16 @@ export function ChartAreaInteractive({ data = [] }: { data: Monitor[] }) {
         <div className="grid flex-1 gap-1.5">
           <CardTitle>Performance des Services</CardTitle>
           <CardDescription>
-            {downService
-              ? `Attention : ${downService.name} est actuellement hors-ligne`
-              : "Tous les systèmes sont opérationnels"}
+            {downServices.length > 0 ? (
+              <span className="text-destructive font-medium">
+                Attention :{" "}
+                {hasMultipleDown
+                  ? `${downServices.length} services sont hors-ligne`
+                  : `${downServices[0].name} est hors-ligne`}
+              </span>
+            ) : (
+              "Tous les systèmes sont opérationnels"
+            )}
           </CardDescription>
         </div>
       </CardHeader>

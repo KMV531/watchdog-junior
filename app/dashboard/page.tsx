@@ -44,7 +44,7 @@ export default function Page() {
             <ChartAreaInteractive data={monitors} />
           </div>
 
-          <LogDataTable data={monitors} onRefresh={fetchData} />
+          <LogDataTable data={monitors} />
         </div>
       </div>
     </div>
