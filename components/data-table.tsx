@@ -40,6 +40,7 @@ import {
   ExternalLink,
   Trash2,
 } from "lucide-react";
+import { toast } from "sonner";
 
 // Schema pour les logs
 export const logSchema = z.object({
@@ -218,8 +219,10 @@ export function LogDataTable({
 
       if (res.ok) {
         onRefresh();
+        toast.success("Service supprimé avec succès !");
       }
     } catch (error) {
+      toast.error("Erreur, veuillez réessayer !");
       console.error("Erreur suppression:", error);
     }
   };

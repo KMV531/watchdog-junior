@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
 
 const AddMonitorForm = () => {
   const router = useRouter();
@@ -24,10 +25,12 @@ const AddMonitorForm = () => {
       });
 
       if (res.ok) {
+        toast.success("Service ajouté avec succès !");
         router.push("/dashboard");
         router.refresh();
       }
     } catch (error) {
+      toast.error("Erreur, veuillez réessayer !");
       console.error("Erreur:", error);
     } finally {
       setIsSubmitting(false);
