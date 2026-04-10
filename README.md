@@ -1,8 +1,8 @@
-# Watchdog Junior - Supervision des services Sepefrei
+# Watchdog Junior - Supervision des services
 
 ![Watchdog Junior Preview](./public/thumbnail.png)
 
-Dashboard de supervision permettant de surveiller en temps réel la disponibilité des sites web de la Junior-Entreprise Sepefrei.
+Dashboard de supervision permettant de surveiller en temps réel la disponibilité des sites web.
 
 ## Technologies utilisées
 
@@ -43,7 +43,7 @@ Ouvrir [http://localhost:3000](http://localhost:3000/) pour voir l'application
 
 ## Fonctionnalités réalisées
 
-### Core demandé
+### Core
 
 - Liste des sites surveillés avec statut UP/DOWN
 - Ajout d'un nouveau site (nom + URL)
@@ -70,13 +70,9 @@ Ouvrir [http://localhost:3000](http://localhost:3000/) pour voir l'application
 
 ![Structure du projet Preview](./public/structure-preview.png)
 
-## Notes
-
-- Le projet n'est pas déployé en ligne (non demandé)
-- L'accent a été mis sur la propreté du code et l'expérience utilisateur
 
 ## Auteur
 
-\[Vinny Brayan\] - Étudiant - B1 - EFREI Bordeaux
+\[Vinny Momo\]
 
 - GitHub : \[[Mon GitHub](https://github.com/KMV531/)\]
